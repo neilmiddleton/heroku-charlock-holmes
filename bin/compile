@@ -1,4 +1,5 @@
 #!/bin/sh
 
-gem install charlock_holmes -- --with-icu-lib=/usr/lib/x86_64-linux-gnu --with-icu-include=/usr/include/x86_64-linux-gnu
+echo -n "--with-icu-dir=\"$BUILD_DIR/.apt/usr\"" > $3/BUNDLE_BUILD__CHARLOCK_HOLMES
+gem install charlock_holmes
 chmod a+r -R /app/src/public/images/emoji
